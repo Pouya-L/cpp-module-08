@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plashkar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 20:29:25 by plashkar          #+#    #+#             */
-/*   Updated: 2025/03/21 21:45:17 by plashkar         ###   ########.fr       */
+/*   Updated: 2025/04/02 21:51:23 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ private:
 	std::vector<int>	_numbers;
 	unsigned int		_maxSize;
 public:
+	Span();
 	Span(unsigned int N);
 	Span(const Span& src);
 	Span& operator=(const Span& src);
@@ -38,26 +39,12 @@ public:
 class overflowError: public std::exception
 {
 public:
-	virtual const char *what() const throw()
-	{
-		return ("Cannot add number, Span is full.");
-	}
+	virtual const char *what() const throw();
 };
 
 class tooFewMembers: public std::exception
 {
 public:
-	virtual const char *what() const throw()
-	{
-		return("Cannot calculate span, not enough numbers.");
-	}
+	virtual const char *what() const throw();
 };
 
-class invalidRangeIterators : public std::exception
-{
-public:
-	virtual const char *what() const throw()
-	{
-		return("Iterators do not belong to the same container or are in the wrong order");
-	}
-};

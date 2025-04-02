@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   eastfind.hpp                                       :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plashkar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 19:15:22 by plashkar          #+#    #+#             */
-/*   Updated: 2025/03/21 21:48:45 by plashkar         ###   ########.fr       */
+/*   Updated: 2025/04/02 21:34:40 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@
 class NotFoundException: public std::exception
 {
 public:
-	virtual const char *what() const throw()
-	{
-		return ("Not found");
-	}
+	virtual const char *what() const throw();
 };
 
 /**

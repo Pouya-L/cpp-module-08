@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plashkar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 20:33:16 by plashkar          #+#    #+#             */
-/*   Updated: 2025/03/21 22:15:41 by plashkar         ###   ########.fr       */
+/*   Updated: 2025/04/02 21:51:03 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
+
+Span::Span() : _maxSize(0) {}
 
 Span::Span(unsigned int N): _maxSize(N) {} // No need to initialize _numbers explicitly, it starts empty.
 
@@ -97,6 +99,16 @@ int	Span::longestSpan()const
 	int maxValue = *std::max_element(_numbers.begin(), _numbers.end());
 
 	return (maxValue - minValue);
+}
+
+const char* overflowError::what() const throw()
+{
+	return ("Cannot add number, Span is full.");
+}
+
+const char* tooFewMembers::what() const throw()
+{
+	return("Cannot calculate span, not enough numbers.");
 }
 
 

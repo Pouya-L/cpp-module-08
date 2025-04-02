@@ -6,11 +6,11 @@
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 19:14:05 by plashkar          #+#    #+#             */
-/*   Updated: 2025/04/02 19:19:25 by plashkar         ###   ########.fr       */
+/*   Updated: 2025/04/02 21:34:30 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "eastfind.hpp"
+#include "easyfind.hpp"
 #include <stdlib.h>
 #include <ctime>
 #include <vector>
@@ -26,6 +26,11 @@
 # define MAGENTA	"\033[35m"	// Magenta
 # define CYAN		"\033[36m"	// Cyan
 # define WHITE		"\033[37m"	// White
+
+const char* NotFoundException::what() const throw()
+{
+	return ("Not found");
+}
 
 int	main(void)
 {
