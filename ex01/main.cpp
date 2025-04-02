@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plashkar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 20:23:27 by plashkar          #+#    #+#             */
-/*   Updated: 2025/03/21 22:17:07 by plashkar         ###   ########.fr       */
+/*   Updated: 2025/04/02 19:21:40 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(void)
 	std::cout << "---------------------------------------------------------------------------" << std::endl;
 	//adding a range of numbers to span object and checking the short and long span
 	{
-		std::cout << "Adding a range of numbers to span object and checking the short and long span" << std::endl;
+		std::cout << "Adding a range of numbers from 1 to 10 to span object and checking the short and long span" << std::endl;
 		try
 		{
 			sp.addRange(vec1.begin(), vec1.end());

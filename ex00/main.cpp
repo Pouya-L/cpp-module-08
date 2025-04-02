@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plashkar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 19:14:05 by plashkar          #+#    #+#             */
-/*   Updated: 2025/03/21 20:22:20 by plashkar         ###   ########.fr       */
+/*   Updated: 2025/04/02 19:19:25 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,9 +97,9 @@ int	main(void)
 		}
 		std::cout << std::endl;
 
-		// Attempt to find the number 5
+		// Attempt to find the number 9
 		try {
-			std::list<int>::iterator i = easyfind(Number_list, 5);
+			std::list<int>::iterator i = easyfind(Number_list, 9);
 			std::cout << GREEN << "Found: " << *i << RESET << std::endl;
 		}
 		catch(const std::exception& e) {
